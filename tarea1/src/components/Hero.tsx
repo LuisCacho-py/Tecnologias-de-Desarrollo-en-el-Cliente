@@ -9,9 +9,6 @@ const Hero: React.FC = () => {
       <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
         Software Development Engineering Student
       </p>
-      <a href="#contact" className="btn">
-        Contáctame
-      </a>
     </section>
   );
 };
