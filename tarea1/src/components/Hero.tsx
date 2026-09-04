@@ -9,6 +9,14 @@ const Hero: React.FC = () => {
       <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
         Software Development Engineering Student
       </p>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+        <a href="https://github.com/LuisCacho-py" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: 'var(--surface-color)', color: 'var(--text-primary)' }}>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/luis-cacho" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: 'var(--surface-color)', color: 'var(--text-primary)' }}>
+          LinkedIn
+        </a>
+      </div>
     </section>
   );
 };
