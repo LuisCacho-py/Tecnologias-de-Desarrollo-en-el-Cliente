@@ -1,0 +1,24 @@
+import React from 'react';
+
+const Education: React.FC = () => {
+  return (
+    <section className="glass-card animate-fade-in" style={{ animationDelay: '0.8s' }}>
+      <h2 className="title-gradient">Educación</h2>
+      <div style={{ marginTop: '2rem' }}>
+        <div style={{
+            borderLeft: '4px solid var(--accent-1)',
+            paddingLeft: '1.5rem',
+            marginBottom: '2rem'
+        }}>
+          <h3 style={{ color: 'var(--text-primary)', marginBottom: '0.25rem' }}>Ingeniería en Desarrollo de Software</h3>
+          <p style={{ color: 'var(--accent-2)', fontWeight: 600, marginBottom: '0.5rem' }}>Universidad / Instituto - (Actualidad)</p>
+          <p style={{ color: 'var(--text-secondary)' }}>
+            Especialización en Tecnologías de Desarrollo en el Cliente. Participación en proyectos de interfaces dinámicas y optimización web.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Education;
