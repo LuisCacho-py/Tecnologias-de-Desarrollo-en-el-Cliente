@@ -28,12 +28,12 @@ const Experience: React.FC = () => {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
           {skills.map((skill, idx) => (
             <span key={idx} style={{
-              background: 'rgba(59, 130, 246, 0.15)',
+              background: 'rgba(186, 200, 177, 0.15)',
               color: 'var(--accent-2)',
               padding: '0.4rem 1rem',
               borderRadius: '20px',
               fontSize: '0.9rem',
-              border: '1px solid rgba(59, 130, 246, 0.3)'
+              border: '1px solid rgba(186, 200, 177, 0.3)'
             }}>
               {skill}
             </span>

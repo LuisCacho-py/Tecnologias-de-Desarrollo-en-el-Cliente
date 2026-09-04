@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
 :root {
-  --bg-color: #0f172a;
-  --surface-color: #1e293b;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  /* Nueva Paleta de Colores */
+  --bg-color: #404E3B; /* Verde bosque oscuro */
+  --surface-color: #6C8480; /* Teal apagado */
+  --text-primary: #E6E6E6; /* Gris claro / blanco roto */
+  --text-secondary: #BAC8B1; /* Verde salvia claro */
   
-  --accent-1: #8b5cf6;
-  --accent-2: #3b82f6;
+  --accent-1: #7B9669; /* Verde medio */
+  --accent-2: #BAC8B1; /* Verde salvia claro */
   --gradient-accent: linear-gradient(135deg, var(--accent-1), var(--accent-2));
   
-  --glass-bg: rgba(30, 41, 59, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(108, 132, 128, 0.25); /* #6C8480 con opacidad */
+  --glass-border: rgba(230, 230, 230, 0.15); /* #E6E6E6 con opacidad */
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 
   --border-radius: 16px;
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -65,8 +66,8 @@ a:hover {
 
 .glass-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   border-radius: var(--border-radius);
@@ -76,16 +77,16 @@ a:hover {
 
 .glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
   background: var(--gradient-accent);
-  color: white;
+  color: var(--bg-color);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer;
   transition: var(--transition);
   font-family: inherit;
@@ -94,7 +95,7 @@ a:hover {
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 15px rgba(123, 150, 105, 0.5); /* #7B9669 */
 }
 
 .btn:disabled {

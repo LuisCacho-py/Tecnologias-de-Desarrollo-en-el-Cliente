@@ -36,13 +36,13 @@ const ContactForm: React.FC = () => {
       
       {isSubmitted ? (
         <div style={{
-          background: 'rgba(16, 185, 129, 0.2)',
-          border: '1px solid #10b981',
+          background: 'rgba(123, 150, 105, 0.2)',
+          border: '1px solid var(--accent-1)',
           padding: '2rem',
           borderRadius: '12px',
           textAlign: 'center'
         }}>
-          <h3 style={{ color: '#10b981', marginBottom: '1rem' }}>¡Mensaje enviado con éxito!</h3>
+          <h3 style={{ color: 'var(--accent-1)', marginBottom: '1rem' }}>¡Mensaje enviado con éxito!</h3>
           <p style={{ color: 'var(--text-secondary)' }}>
             Gracias por contactarme, {formData.name}. Revisa la consola para ver los datos que llenaste.
           </p>
