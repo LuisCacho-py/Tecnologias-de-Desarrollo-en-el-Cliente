@@ -5,6 +5,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Hobbies from './components/Hobbies';
+import ContactForm from './components/ContactForm';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Projects />
       <Education />
       <Hobbies />
+      <ContactForm />
     </main>
   );
 };
