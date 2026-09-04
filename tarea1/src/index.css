@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
 :root {
-  /* Nueva Paleta de Colores */
-  --bg-color: #404E3B; /* Verde bosque oscuro */
-  --surface-color: #6C8480; /* Teal apagado */
-  --text-primary: #E6E6E6; /* Gris claro / blanco roto */
-  --text-secondary: #BAC8B1; /* Verde salvia claro */
+  /* Nueva Paleta de Colores - High Contrast Light Theme */
+  --bg-color: #F8F3CE; /* Crema pálido */
+  --surface-color: #DDDAD0; /* Gris beige claro */
+  --text-primary: #57564F; /* Topo oscuro (alta legibilidad) */
+  --text-secondary: #7A7A73; /* Topo medio */
   
-  --accent-1: #7B9669; /* Verde medio */
-  --accent-2: #BAC8B1; /* Verde salvia claro */
+  --accent-1: #57564F; /* Topo oscuro para botones/gradientes */
+  --accent-2: #7A7A73; /* Topo medio para gradientes */
   --gradient-accent: linear-gradient(135deg, var(--accent-1), var(--accent-2));
   
-  --glass-bg: rgba(108, 132, 128, 0.25); /* #6C8480 con opacidad */
-  --glass-border: rgba(230, 230, 230, 0.15); /* #E6E6E6 con opacidad */
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --glass-bg: rgba(221, 218, 208, 0.6); /* #DDDAD0 con opacidad */
+  --glass-border: rgba(122, 122, 115, 0.2); /* #7A7A73 con opacidad */
+  --glass-shadow: 0 8px 32px rgba(87, 86, 79, 0.15); /* #57564F sombra */
 
   --border-radius: 16px;
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -46,13 +46,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--accent-2);
+  color: var(--text-primary);
   text-decoration: none;
   transition: var(--transition);
 }
 
 a:hover {
-  color: var(--accent-1);
+  color: var(--text-secondary);
 }
 
 .container {
@@ -77,12 +77,12 @@ a:hover {
 
 .glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 40px rgba(87, 86, 79, 0.25);
 }
 
 .btn {
   background: var(--gradient-accent);
-  color: var(--bg-color);
+  color: #F8F3CE; /* Texto claro sobre botón oscuro */
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -95,7 +95,7 @@ a:hover {
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(123, 150, 105, 0.5); /* #7B9669 */
+  box-shadow: 0 0 15px rgba(87, 86, 79, 0.5); /* #57564F */
 }
 
 .btn:disabled {

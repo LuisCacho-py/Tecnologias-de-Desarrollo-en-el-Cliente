@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {
     marginBottom: '1rem',
     borderRadius: '8px',
     border: '1px solid var(--glass-border)',
-    background: 'rgba(255, 255, 255, 0.05)',
+    background: 'rgba(221, 218, 208, 0.5)',
     color: 'var(--text-primary)',
     fontFamily: 'inherit',
     fontSize: '1rem'
@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
       
       {isSubmitted ? (
         <div style={{
-          background: 'rgba(123, 150, 105, 0.2)',
+          background: 'rgba(221, 218, 208, 0.8)',
           border: '1px solid var(--accent-1)',
           padding: '2rem',
           borderRadius: '12px',
