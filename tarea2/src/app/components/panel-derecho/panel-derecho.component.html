@@ -1,0 +1,8 @@
+<div *ngIf="!tituloSeleccionado">
+  <p>No hay ningún elemento seleccionado.</p>
+</div>
+
+<div *ngIf="tituloSeleccionado">
+  <p><strong>Título seleccionado:</strong> {{ tituloSeleccionado }}</p>
+  <button (click)="limpiar()">Limpiar</button>
+</div>

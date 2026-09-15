@@ -1,0 +1,8 @@
+<ul>
+  <li
+    *ngFor="let titulo of titulos"
+    [class.seleccionado]="titulo === tituloSeleccionado"
+    (click)="seleccionar(titulo)">
+    {{ titulo }}
+  </li>
+</ul>
