@@ -1,0 +1,19 @@
+<div class="contenedor">
+
+  <div class="panel">
+    <h2>Lista de libros</h2>
+    <app-panel-izquierdo
+      [tituloSeleccionado]="tituloSeleccionado"
+      (tituloElegido)="onTituloElegido($event)">
+    </app-panel-izquierdo>
+  </div>
+
+  <div class="panel">
+    <h2>Detalle</h2>
+    <app-panel-derecho
+      [tituloSeleccionado]="tituloSeleccionado"
+      (limpiarSeleccion)="onLimpiarSeleccion()">
+    </app-panel-derecho>
+  </div>
+
+</div>
