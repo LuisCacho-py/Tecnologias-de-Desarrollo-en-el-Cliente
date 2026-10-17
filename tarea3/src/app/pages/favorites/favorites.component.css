@@ -1,0 +1,75 @@
+.encabezado-favoritos {
+  margin-bottom: 20px;
+}
+
+.encabezado-favoritos h2 {
+  color: #222222;
+  margin-bottom: 6px;
+}
+
+.encabezado-favoritos p {
+  color: #666666;
+  font-size: 0.95rem;
+}
+
+.barra-acciones-favoritos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  padding: 10px 16px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.btn-vaciar {
+  background-color: #ffebee;
+  border: 1px solid #ef9a9a;
+  color: #c62828;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.btn-vaciar:hover {
+  background-color: #ffcdd2;
+}
+
+.grid-favoritos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.vacio-favoritos {
+  background-color: #ffffff;
+  border: 1px dashed #cccccc;
+  border-radius: 6px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.vacio-favoritos h3 {
+  color: #444444;
+  margin-bottom: 8px;
+}
+
+.vacio-favoritos p {
+  color: #777777;
+  margin-bottom: 20px;
+}
+
+.btn-ir-catalogo {
+  display: inline-block;
+  background-color: #1976d2;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-ir-catalogo:hover {
+  background-color: #1565c0;
+  text-decoration: none;
+}

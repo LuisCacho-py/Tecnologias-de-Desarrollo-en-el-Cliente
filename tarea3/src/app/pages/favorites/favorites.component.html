@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="encabezado-favoritos">
+    <h2>Mis Películas Favoritas</h2>
+    <p>Lista de películas guardadas en memoria durante la sesión.</p>
+  </div>
+
+  @if (favorites$ | async; as favorites) {
+    @if (favorites.length > 0) {
+      <div class="barra-acciones-favoritos">
+        <span>Tienes <strong>{{ favorites.length }}</strong> película(s) en favoritos</span>
+        <button type="button" class="btn-vaciar" (click)="onClearAll()">
+          Vaciar lista de favoritos
+        </button>
+      </div>
+
+      <div class="grid-favoritos">
+        @for (movie of favorites; track movie.id) {
+          <app-movie-card 
+            [movie]="movie" 
+            [isFavorite]="true"
+            [showRemoveButton]="true"
+            (toggleFavorite)="onRemoveFavorite($event)"
+            (selectMovie)="onSelectMovie($event)">
+          </app-movie-card>
+        }
+      </div>
+    } @else {
+      <div class="vacio-favoritos">
+        <h3>No tienes películas favoritas todavía</h3>
+        <p>Visita el catálogo principal para seleccionar y agregar películas a tu lista.</p>
+        <a routerLink="/" class="btn-ir-catalogo">Ver catálogo de películas</a>
+      </div>
+    }
+  }
+</div>

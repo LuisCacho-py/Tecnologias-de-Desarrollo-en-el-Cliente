@@ -1,0 +1,60 @@
+<div class="container">
+  @if (movie) {
+    <div class="navegacion-arriba">
+      <a routerLink="/" class="btn-volver">← Volver al catálogo</a>
+    </div>
+
+    <div class="panel-detalle">
+      <div class="columna-poster">
+        <img [src]="movie.imageUrl" 
+             [alt]="movie.title" 
+             [appImageFallback]="''" 
+             class="poster-grande">
+
+        <button type="button" 
+                class="btn-favorito-detalle" 
+                [class.activo]="isFavorite" 
+                (click)="toggleFavorite()"
+                id="btn-toggle-favorite-detail">
+          {{ isFavorite ? '❤️ Quitar de favoritos' : '⭐ Agregar a favoritos' }}
+        </button>
+      </div>
+
+      <div class="columna-info">
+        <h1>{{ movie.title }}</h1>
+        <hr class="separador">
+
+        <div class="datos-detalle">
+          <p><strong>Director:</strong> {{ movie.director }}</p>
+          <p><strong>Productor:</strong> {{ movie.producer }}</p>
+          <p><strong>Género:</strong> {{ movie.genre }}</p>
+          <p><strong>Año de estreno:</strong> {{ movie.year }}</p>
+          @if (movie.duration) {
+            <p><strong>Duración:</strong> {{ movie.duration }}</p>
+          }
+          @if (movie.rating) {
+            <p><strong>Calificación:</strong> {{ movie.rating }} / 10</p>
+          }
+        </div>
+
+        <div class="seccion-sinopsis">
+          <h3>Descripción:</h3>
+          <p class="texto-sinopsis">{{ movie.description }}</p>
+        </div>
+
+        @if (movie.cast && movie.cast.length > 0) {
+          <div class="seccion-reparto">
+            <h3>Reparto:</h3>
+            <p>{{ movie.cast.join(', ') }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  } @else {
+    <div class="no-encontrada">
+      <h2>Película no encontrada</h2>
+      <p>No se encontró ninguna película con el ID especificado.</p>
+      <a routerLink="/" class="btn-volver">Ir al catálogo</a>
+    </div>
+  }
+</div>

@@ -1,0 +1,24 @@
+.mensaje-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333333;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.mensaje-flotante.success {
+  background-color: #2e7d32;
+}
+
+.mensaje-flotante.info {
+  background-color: #0288d1;
+}
+
+.mensaje-flotante.warning {
+  background-color: #ed6c02;
+}

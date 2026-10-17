@@ -1,0 +1,28 @@
+.encabezado {
+  margin-bottom: 20px;
+}
+
+.encabezado h2 {
+  margin-bottom: 6px;
+  color: #222222;
+}
+
+.encabezado p {
+  color: #666666;
+  font-size: 0.95rem;
+}
+
+.grid-peliculas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.mensaje-vacio {
+  background-color: #ffffff;
+  border: 1px dashed #cccccc;
+  padding: 30px;
+  text-align: center;
+  color: #777777;
+  border-radius: 6px;
+}

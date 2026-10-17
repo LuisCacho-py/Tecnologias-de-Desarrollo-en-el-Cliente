@@ -1,0 +1,66 @@
+<div class="panel-filtros">
+  <h3>Filtros de Búsqueda</h3>
+
+  <form [formGroup]="filterForm" class="filtros-grid">
+    <!-- Filtro por Título -->
+    <div class="campo">
+      <label for="titulo">Título:</label>
+      <input 
+        id="titulo" 
+        type="text" 
+        formControlName="title" 
+        placeholder="Buscar por título...">
+    </div>
+
+    <!-- Filtro por Director -->
+    <div class="campo">
+      <label for="director">Director:</label>
+      <input 
+        id="director" 
+        type="text" 
+        formControlName="director" 
+        placeholder="Buscar por director...">
+    </div>
+
+    <!-- Filtro por Productor -->
+    <div class="campo">
+      <label for="productor">Productor:</label>
+      <input 
+        id="productor" 
+        type="text" 
+        formControlName="producer" 
+        placeholder="Buscar por productor...">
+    </div>
+
+    <!-- Filtro por Género -->
+    <div class="campo">
+      <label for="genero">Género:</label>
+      <select id="genero" formControlName="genre">
+        <option value="Todos">Todos los géneros</option>
+        @for (genre of genres; track genre) {
+          <option [value]="genre">{{ genre }}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Filtro por Año -->
+    <div class="campo">
+      <label for="anio">Año:</label>
+      <select id="anio" formControlName="year">
+        <option [ngValue]="null">Todos los años</option>
+        @for (year of years; track year) {
+          <option [ngValue]="year">{{ year }}</option>
+        }
+      </select>
+    </div>
+  </form>
+
+  <div class="filtros-acciones">
+    <button type="button" class="btn-limpiar" (click)="resetFilters()">
+      Limpiar filtros
+    </button>
+    <span class="contador">
+      Mostrando {{ filteredCount }} de {{ totalCount }} películas
+    </span>
+  </div>
+</div>
