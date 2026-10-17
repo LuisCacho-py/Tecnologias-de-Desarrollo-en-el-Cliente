@@ -1,0 +1,49 @@
+<div class="tarjeta-pelicula" [class.es-favorita]="isFavorite">
+  <div class="tarjeta-imagen">
+    <img [src]="movie.imageUrl" 
+         [alt]="movie.title" 
+         [appImageFallback]="''"
+         class="poster">
+    
+    <button type="button" 
+            class="btn-icono-favorito" 
+            [class.activo]="isFavorite"
+            (click)="onToggleFavorite($event)"
+            [title]="isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos'">
+      {{ isFavorite ? '❤️' : '🤍' }}
+    </button>
+  </div>
+
+  <div class="tarjeta-cuerpo">
+    <h3 class="pelicula-titulo">
+      <a [routerLink]="['/movies', movie.id]">{{ movie.title }}</a>
+    </h3>
+
+    <div class="datos-principales">
+      <p><strong>Director:</strong> {{ movie.director }}</p>
+      <p><strong>Productor:</strong> {{ movie.producer }}</p>
+      <p><strong>Género:</strong> {{ movie.genre }} | <strong>Año:</strong> {{ movie.year }}</p>
+    </div>
+
+    <p class="sinopsis-corta">{{ movie.description }}</p>
+
+    <div class="tarjeta-botones">
+      <a [routerLink]="['/movies', movie.id]" class="btn-detalle" (click)="onSelectMovie()">
+        Ver detalle
+      </a>
+
+      @if (showRemoveButton) {
+        <button type="button" class="btn-quitar" (click)="onToggleFavorite($event)">
+          Quitar de favoritos
+        </button>
+      } @else {
+        <button type="button" 
+                class="btn-favorito" 
+                [class.activo]="isFavorite"
+                (click)="onToggleFavorite($event)">
+          {{ isFavorite ? 'Quitar favorito' : 'Agregar favorito' }}
+        </button>
+      }
+    </div>
+  </div>
+</div>

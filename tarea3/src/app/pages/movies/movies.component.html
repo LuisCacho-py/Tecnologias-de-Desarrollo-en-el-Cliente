@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="encabezado">
+    <h2>Catálogo de Películas</h2>
+    <p>Consulta la lista de películas, filtra por distintos criterios y administra tus favoritas.</p>
+  </div>
+
+  <!-- Componente de filtros -->
+  <app-movie-filter 
+    [genres]="genres" 
+    [years]="years" 
+    [totalCount]="allMovies.length" 
+    [filteredCount]="filteredMovies.length" 
+    (filterChange)="onFilterChange($event)">
+  </app-movie-filter>
+
+  <!-- Lista de películas -->
+  @if (filteredMovies.length > 0) {
+    <div class="grid-peliculas">
+      @for (movie of filteredMovies; track movie.id) {
+        <app-movie-card 
+          [movie]="movie" 
+          [isFavorite]="isFavorite(movie)"
+          (toggleFavorite)="onToggleFavorite($event)"
+          (selectMovie)="onSelectMovie($event)">
+        </app-movie-card>
+      }
+    </div>
+  } @else {
+    <div class="mensaje-vacio">
+      <p>No se encontraron películas con los criterios especificados.</p>
+    </div>
+  }
+</div>

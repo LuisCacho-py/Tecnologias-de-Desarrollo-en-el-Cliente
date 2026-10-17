@@ -1,0 +1,21 @@
+<header class="navbar">
+  <div class="nav-content">
+    <a routerLink="/" class="nav-title">
+      🎬 Catálogo de Películas
+    </a>
+
+    <nav class="nav-links">
+      <a routerLink="/" 
+         routerLinkActive="active" 
+         [routerLinkActiveOptions]="{ exact: true }" 
+         class="nav-link">
+        Películas
+      </a>
+      <a routerLink="/favorites" 
+         routerLinkActive="active" 
+         class="nav-link">
+        Favoritos ({{ (favoritesCount$ | async) || 0 }})
+      </a>
+    </nav>
+  </div>
+</header>

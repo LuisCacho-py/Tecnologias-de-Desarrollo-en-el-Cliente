@@ -1,0 +1,78 @@
+.panel-filtros {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.panel-filtros h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+  color: #333333;
+  border-bottom: 2px solid #1976d2;
+  padding-bottom: 6px;
+}
+
+.filtros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campo label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #555555;
+}
+
+.campo input,
+.campo select {
+  padding: 8px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background-color: #fafafa;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: none;
+  border-color: #1976d2;
+  background-color: #ffffff;
+}
+
+.filtros-acciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #eeeeee;
+}
+
+.btn-limpiar {
+  background-color: #e0e0e0;
+  color: #333333;
+  border: 1px solid #cccccc;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.btn-limpiar:hover {
+  background-color: #d5d5d5;
+}
+
+.contador {
+  font-size: 0.88rem;
+  color: #666666;
+  font-weight: bold;
+}
